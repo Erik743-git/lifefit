@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | LifeFit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body class="has-bottom-nav" data-page="contato">
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="Menu lateral"></aside>
+    <div class="app-main">
+      <header class="header">
+        <div class="header__top">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="LifeFit">
+          </a>
+          <div class="header__search">
+            <input type="search" placeholder="Procurar">
+            <span class="header__search-icon">🔍</span>
+          </div>
+          <a href="configuracoes.html" class="header__icon-btn" title="Configurações" aria-label="Configurações">⚙️</a>
+          <a href="login.html" class="btn btn--red">Login</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+          </button>
+        </div>
+        <nav class="subnav" id="subnav">
+          <a href="depoimentos.html" class="subnav__link">Depoimentos</a>
+          <a href="infraestrutura.html" class="subnav__link">Infraestrutura</a>
+          <a href="planos.html" class="subnav__link">Matricular-se</a>
+          <a href="sobre.html" class="subnav__link">Sobre</a>
+          <a href="configuracoes.html" class="subnav__link">Configurações</a>
+        </nav>
+      </header>
+
+      <main class="page-section container">
+        <h1 class="page-title">Contato</h1>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-info__item">
+              <span>📧</span>
+              <div>
+                <strong>E-mail</strong>
+                <p>contato@lifefit.com.br</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <span>📱</span>
+              <div>
+                <strong>Telefone</strong>
+                <p>(11) 99999-0000</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <span>📍</span>
+              <div>
+                <strong>Endereço</strong>
+                <p>R. Visc. de Taunay 427 - Centro, Joinville-SC</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <span>🕐</span>
+              <div>
+                <strong>Horário</strong>
+                <p>Seg a Sex, 6h às 22h | Sáb, 8h às 14h</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" required>
+              <span class="form-error" id="erroNome"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+              <span class="form-error" id="erroEmail"></span>
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto" required>
+                <option value="">Selecione</option>
+                <option value="matricula">Matrícula / Planos</option>
+                <option value="suporte">Suporte</option>
+                <option value="outro">Outro</option>
+              </select>
+              <span class="form-error" id="erroAssunto"></span>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+              <span class="form-error" id="erroMensagem"></span>
+            </div>
+            <button type="submit" class="btn btn--red btn--block">Enviar mensagem</button>
+            <div class="form-success" id="formSuccess" hidden>
+              <p>Mensagem enviada com sucesso!</p>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <nav class="bottom-nav">
+        <ul class="bottom-nav__list">
+          <li><a href="perfil.html" class="bottom-nav__link"><span class="bottom-nav__icon">👤</span>Perfil</a></li>
+          <li><a href="../index.html" class="bottom-nav__link"><span class="bottom-nav__icon">🏠</span>Início</a></li>
+          <li><a href="configuracoes.html" class="bottom-nav__link"><span class="bottom-nav__icon">⚙️</span>Configurações</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/contato.js"></script>
+</body>
+</html>
