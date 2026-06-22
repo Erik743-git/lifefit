@@ -42,13 +42,13 @@ HTML5 · CSS3 · JavaScript (Vanilla) · Git · GitHub Pages
 
 ## Páginas e responsabilidades (para avaliação individual)
 
-| Integrante   | Página / Componente        | Arquivo principal        |
-|--------------|----------------------------|--------------------------|
-| Integrante 1 | Home + Header              | `index.html`, `style.css`|
-| Integrante 2 | Login + Planos             | `login.html`, `planos.js`|
-| Integrante 3 | Perfil + Configurações     | `perfil.js`, `configuracoes.js` |
-| Integrante 4 | Depoimentos + Infraestrutura | `depoimentos.html`, `infraestrutura.html` |
-| Integrante 5 | Sobre + Contato            | `sobre.html`, `contato.js` |
+| Integrante | Página / Componente              | Arquivo principal              |
+|------------|----------------------------------|--------------------------------|
+| Erik       | Home + Header                    | `index.html`, `style.css`      |
+| Eduardo    | Login + Planos                   | `login.html`, `planos.js`      |
+| Pedro      | Perfil + Configurações           | `perfil.html`, `configuracoes.js` |
+| João       | Depoimentos + Infraestrutura     | `depoimentos.html`, `infraestrutura.html` |
+| Vitor      | Sobre + Contato                  | `sobre.html`, `contato.js`     |
 
 ## Como rodar
 
@@ -73,6 +73,4 @@ HTML5 · CSS3 · JavaScript (Vanilla) · Git · GitHub Pages
 
 ## Equipe
 
-Erik Manarin · Ana Lima · Pedro Silva · Mariana Costa
-
-*(Ajuste com os nomes reais do seu grupo)*
+**Erik · Eduardo · Pedro · João · Vitor**

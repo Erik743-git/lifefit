@@ -55,6 +55,9 @@
 
   .menu-toggle {
     display: flex;
+  }
+
+  .header__icon-btn {
     margin-left: auto;
   }
 
