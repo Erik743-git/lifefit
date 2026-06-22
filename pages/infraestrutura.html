@@ -12,9 +12,10 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/responsive.css">
 </head>
-<body class="has-bottom-nav">
+<body class="has-bottom-nav" data-page="infraestrutura">
 
   <div class="app-layout">
+    <aside class="sidebar" id="sidebar" aria-label="Menu lateral"></aside>
     <div class="app-main">
       <header class="header">
         <div class="header__top">
@@ -71,15 +72,9 @@
         </ul>
       </nav>
     </div>
-    <aside class="sidebar">
-      <div class="sidebar__search">🔍</div>
-      <div class="sidebar__bottom">
-        <a href="configuracoes.html" class="sidebar__icon-btn" title="Configurações">⚙️</a>
-        <a href="perfil.html" class="sidebar__avatar">👤</a>
-      </div>
-    </aside>
   </div>
 
+  <script src="../js/sidebar.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

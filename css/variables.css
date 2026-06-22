@@ -38,7 +38,8 @@
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
   --shadow-red: 0 8px 32px var(--color-red-glow);
 
-  --sidebar-width: 72px;
+  --sidebar-width: 240px;
+  --sidebar-width-collapsed: 76px;
   --header-height: 88px;
   --bottom-nav-height: 72px;
   --container-width: 1140px;
