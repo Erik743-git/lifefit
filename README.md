@@ -5,7 +5,8 @@ Website da academia **LifeFit**, desenvolvido com base no protótipo Figma. Proj
 ## Links
 
 - **Figma:** [Protótipo LifeFit](https://www.figma.com/proto/LLjcoiwIJqekuU9L0gYQrb/LifeFit?node-id=0-1)
-- **GitHub Pages:** configure em Settings → Pages → branch `main` → pasta `/ (root)`
+- **Site online:** [https://erik743-git.github.io/lifefit/](https://erik743-git.github.io/lifefit/)
+- **Repositório:** [https://github.com/Erik743-git/lifefit](https://github.com/Erik743-git/lifefit)
 
 ## Tecnologias
 
