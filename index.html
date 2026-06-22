@@ -45,17 +45,33 @@
       <main>
         <!-- Hero -->
         <section class="hero">
+          <div class="hero__overlay"></div>
           <div class="hero__content">
-            <h1 class="hero__title">Seja mais forte do que suas desculpas</h1>
+            <span class="hero__badge">💪 Gym & Training</span>
+            <h1 class="hero__title">Seja mais forte do que suas <span class="text-red">desculpas</span></h1>
             <p class="hero__cta">Assine agora sem sair de casa por <strong>APENAS R$30,00/semana</strong></p>
+            <div class="hero__actions">
+              <a href="pages/planos.html" class="btn btn--red btn--lg">Matricular-se agora</a>
+              <a href="pages/infraestrutura.html" class="btn btn--outline btn--lg">Ver estrutura</a>
+            </div>
+            <div class="hero__stats">
+              <div class="hero__stat"><strong>500+</strong><span>Alunos ativos</span></div>
+              <div class="hero__stat"><strong>3</strong><span>Unidades</span></div>
+              <div class="hero__stat"><strong>24h</strong><span>Funcionamento</span></div>
+            </div>
           </div>
         </section>
 
         <!-- Planos na home -->
         <section class="page-section container">
-          <h2 class="page-title">Nossos Planos</h2>
+          <div class="section-header">
+            <span class="section-tag">Planos</span>
+            <h2 class="page-title">Escolha seu plano</h2>
+            <p class="section-desc">Do iniciante ao atleta — temos o plano ideal para o seu objetivo.</p>
+          </div>
           <div class="plans-grid">
-            <article class="plan-card">
+            <article class="plan-card" data-animate>
+              <span class="plan-card__icon">🏋️</span>
               <h3 class="plan-card__name">Plano Basic</h3>
               <p class="plan-card__price">R$ 89,90 <span>/mês</span></p>
               <ul class="plan-card__features">
@@ -66,7 +82,9 @@
               </ul>
               <a href="pages/planos.html#basic" class="btn btn--white btn--block">Assinar</a>
             </article>
-            <article class="plan-card plan-card--featured">
+            <article class="plan-card plan-card--featured" data-animate>
+              <span class="plan-card__badge">Mais popular</span>
+              <span class="plan-card__icon">🔥</span>
               <h3 class="plan-card__name">Plano Pro</h3>
               <p class="plan-card__price">R$ 129,90 <span>/mês</span></p>
               <ul class="plan-card__features">
@@ -77,7 +95,8 @@
               </ul>
               <a href="pages/planos.html#pro" class="btn btn--white btn--block">Assinar</a>
             </article>
-            <article class="plan-card">
+            <article class="plan-card" data-animate>
+              <span class="plan-card__icon">👑</span>
               <h3 class="plan-card__name">Plano Elite</h3>
               <p class="plan-card__price">R$ 189,90 <span>/mês</span></p>
               <ul class="plan-card__features">
@@ -88,6 +107,27 @@
               </ul>
               <a href="pages/planos.html#elite" class="btn btn--white btn--block">Assinar</a>
             </article>
+          </div>
+        </section>
+
+        <!-- Destaques rápidos -->
+        <section class="highlights">
+          <div class="container highlights__grid">
+            <a href="pages/depoimentos.html" class="highlight-card" data-animate>
+              <span class="highlight-card__icon">⭐</span>
+              <h3>Depoimentos</h3>
+              <p>Veja a evolução real dos nossos alunos</p>
+            </a>
+            <a href="pages/infraestrutura.html" class="highlight-card" data-animate>
+              <span class="highlight-card__icon">🏢</span>
+              <h3>Infraestrutura</h3>
+              <p>Equipamentos modernos e ambiente completo</p>
+            </a>
+            <a href="pages/sobre.html" class="highlight-card" data-animate>
+              <span class="highlight-card__icon">📋</span>
+              <h3>Sobre nós</h3>
+              <p>Conheça a missão e a equipe LifeFit</p>
+            </a>
           </div>
         </section>
       </main>

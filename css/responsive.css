@@ -11,14 +11,24 @@
 }
 
 @media (max-width: 1024px) {
-  .plans-grid {
+  :root {
+    --logo-height: 72px;
+  }
+
+  .plans-grid,
+  .highlights__grid {
     grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .plan-card--featured {
     transform: none;
+  }
+
+  .plan-card--featured:hover {
+    transform: translateY(-8px);
   }
 
   .about-grid {
@@ -27,12 +37,16 @@
 }
 
 @media (max-width: 768px) {
+  :root {
+    --logo-height: 64px;
+  }
+
   .bottom-nav {
     display: block;
   }
 
   body.has-bottom-nav {
-    padding-bottom: var(--bottom-nav-height);
+    padding-bottom: calc(var(--bottom-nav-height) + 16px);
   }
 
   .header__search {
@@ -44,18 +58,28 @@
     margin-left: auto;
   }
 
-  .subnav {
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    font-size: 0.8rem;
+  .hero {
+    min-height: 460px;
   }
 
   .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .hero__stats {
+    gap: var(--space-md);
+  }
+
+  .hero__stat strong {
     font-size: 1.4rem;
   }
 
+  .hero__actions .btn--lg {
+    width: 100%;
+  }
+
   .page-title {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 
   .testimonial {
@@ -74,7 +98,6 @@
     display: none;
   }
 
-  /* Subnav vira menu mobile */
   .subnav {
     display: none;
     flex-direction: column;
@@ -82,30 +105,47 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--color-bg-nav);
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(16px);
     z-index: 999;
     padding: var(--space-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    gap: var(--space-xs);
   }
 
   .subnav--open {
     display: flex;
   }
 
+  .subnav__link {
+    text-align: center;
+    padding: 0.75rem;
+  }
+
   .header {
-    position: relative;
+    position: sticky;
   }
 }
 
 @media (max-width: 480px) {
-  .logo img {
-    height: 40px;
+  :root {
+    --logo-height: 56px;
   }
 
   .hero {
-    min-height: 300px;
+    min-height: 380px;
+  }
+
+  .hero__stats {
+    flex-direction: column;
+    gap: var(--space-sm);
   }
 
   .plan-card__price {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+
+  .highlights__grid {
+    grid-template-columns: 1fr;
   }
 }

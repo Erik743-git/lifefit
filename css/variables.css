@@ -1,43 +1,46 @@
-/* Variáveis do LifeFit Gym - baseado no Figma */
+/* Variáveis do LifeFit Gym */
 :root {
-  /* Cores principais */
-  --color-red: #cc0000;
-  --color-red-dark: #a30000;
-  --color-red-light: #ff1a1a;
+  --color-red: #e60000;
+  --color-red-dark: #b30000;
+  --color-red-light: #ff3333;
+  --color-red-glow: rgba(230, 0, 0, 0.35);
 
-  /* Fundos */
-  --color-bg-dark: #121212;
-  --color-bg-card: #2a2a2a;
+  --color-bg-dark: #0a0a0a;
+  --color-bg-elevated: #161616;
+  --color-bg-card: #1f1f1f;
+  --color-bg-card-hover: #282828;
   --color-bg-input: #ffffff;
-  --color-bg-nav: #f5f5f5;
+  --color-bg-nav: transparent;
 
-  /* Texto */
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-gray: #999999;
-  --color-gray-light: #cccccc;
+  --color-gray: #888888;
+  --color-gray-light: #b3b3b3;
 
-  /* Tipografia */
   --font-main: 'Roboto', sans-serif;
   --font-title: 'Montserrat', sans-serif;
 
-  /* Espaçamentos */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
+  --space-2xl: 5rem;
 
-  /* Bordas */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
   --radius-full: 9999px;
 
-  /* Layout */
-  --sidebar-width: 80px;
-  --header-height: 60px;
-  --subnav-height: 44px;
-  --bottom-nav-height: 64px;
-  --container-width: 1100px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-red: 0 8px 32px var(--color-red-glow);
+
+  --sidebar-width: 72px;
+  --header-height: 88px;
+  --bottom-nav-height: 72px;
+  --container-width: 1140px;
+  --logo-height: 88px;
 }
