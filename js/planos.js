@@ -1,27 +1,48 @@
 /**
- * planos.js - Alternância entre preços mensais e anuais
+ * planos.js - Navegação entre seleção e detalhe dos planos
  */
 
 document.addEventListener('DOMContentLoaded', function () {
-  var toggle = document.getElementById('billingToggle');
-  var labelMensal = document.getElementById('labelMensal');
-  var labelAnual = document.getElementById('labelAnual');
-  var priceElements = document.querySelectorAll('.pricing-card__amount');
+  var plansSelect = document.getElementById('plansSelect');
+  var planButtons = document.querySelectorAll('[data-plan]');
+  var backButtons = document.querySelectorAll('[data-back]');
+  var planSections = document.querySelectorAll('.plan-detail');
 
-  if (!toggle) return;
-
-  var isAnual = false;
-
-  toggle.addEventListener('click', function () {
-    isAnual = !isAnual;
-    toggle.classList.toggle('billing-toggle__switch--active', isAnual);
-    labelMensal.classList.toggle('billing-toggle__label--active', !isAnual);
-    labelAnual.classList.toggle('billing-toggle__label--active', isAnual);
-
-    priceElements.forEach(function (el) {
-      var mensal = el.getAttribute('data-mensal');
-      var anual = el.getAttribute('data-anual');
-      el.textContent = isAnual ? anual : mensal;
+  // Abre detalhe do plano ao clicar
+  planButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      event.preventDefault();
+      var planId = btn.getAttribute('data-plan');
+      showPlan(planId);
     });
   });
+
+  // Botão voltar
+  backButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      showPlanSelect();
+    });
+  });
+
+  // Se a URL tiver #basic, #pro ou #elite, abre direto
+  var hash = window.location.hash.replace('#', '');
+  if (hash && document.getElementById(hash)) {
+    showPlan(hash);
+  }
+
+  function showPlan(planId) {
+    if (plansSelect) plansSelect.hidden = true;
+    planSections.forEach(function (section) {
+      section.hidden = section.id !== planId;
+    });
+    window.location.hash = planId;
+  }
+
+  function showPlanSelect() {
+    if (plansSelect) plansSelect.hidden = false;
+    planSections.forEach(function (section) {
+      section.hidden = true;
+    });
+    window.location.hash = '';
+  }
 });

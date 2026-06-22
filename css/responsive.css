@@ -1,144 +1,111 @@
-/* Estilos responsivos - Mobile First adjustments */
+/* Responsividade - LifeFit Gym */
+
+@media (min-width: 1024px) {
+  .sidebar {
+    display: flex;
+  }
+
+  .app-main {
+    margin-right: var(--sidebar-width);
+  }
+}
 
 @media (max-width: 1024px) {
-  .hero__title {
-    font-size: 2.5rem;
+  .plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  .features__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .team__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .pricing-card--featured {
+  .plan-card--featured {
     transform: none;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
-  .header__cta {
+  .bottom-nav {
+    display: block;
+  }
+
+  body.has-bottom-nav {
+    padding-bottom: var(--bottom-nav-height);
+  }
+
+  .header__search {
     display: none;
   }
 
   .menu-toggle {
     display: flex;
+    margin-left: auto;
   }
 
-  .nav {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    right: 0;
-    background: var(--color-white);
-    border-bottom: 1px solid var(--color-gray-200);
-    padding: var(--space-md);
-    transform: translateY(-120%);
-    opacity: 0;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-md);
-  }
-
-  .nav--open {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .nav__list {
-    flex-direction: column;
+  .subnav {
+    flex-wrap: wrap;
     gap: var(--space-sm);
-  }
-
-  .nav__link {
-    display: block;
-    padding: 0.75rem 0;
-    font-size: 1.1rem;
-  }
-
-  .hero__container {
-    grid-template-columns: 1fr;
-    text-align: center;
+    font-size: 0.8rem;
   }
 
   .hero__title {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
-  .hero__text {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero__actions {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .hero__stats {
-    justify-content: center;
-    gap: var(--space-lg);
-  }
-
-  .hero__image {
-    order: -1;
-  }
-
-  .phone-mockup {
-    max-width: 260px;
-  }
-
-  .section__title {
+  .page-title {
     font-size: 1.75rem;
   }
 
-  .features__grid,
-  .steps,
-  .testimonials__grid,
-  .values__grid,
-  .pricing__grid {
+  .testimonial {
     grid-template-columns: 1fr;
   }
 
-  .about-grid,
+  .infra-grid {
+    grid-template-columns: 1fr;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .footer__container {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .header__top .btn--red {
+    display: none;
   }
 
-  .footer__desc {
-    margin: var(--space-sm) auto 0;
+  /* Subnav vira menu mobile */
+  .subnav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-nav);
+    z-index: 999;
+    padding: var(--space-md);
   }
 
-  .page-hero__title {
-    font-size: 1.75rem;
+  .subnav--open {
+    display: flex;
   }
 
-  .cta-banner__title {
-    font-size: 1.75rem;
-  }
-
-  .team__grid {
-    grid-template-columns: 1fr 1fr;
+  .header {
+    position: relative;
   }
 }
 
 @media (max-width: 480px) {
-  .hero__stats {
-    flex-direction: column;
-    gap: var(--space-md);
+  .logo img {
+    height: 40px;
   }
 
-  .hero__actions .btn--lg {
-    width: 100%;
+  .hero {
+    min-height: 300px;
   }
 
-  .team__grid {
-    grid-template-columns: 1fr;
+  .plan-card__price {
+    font-size: 2rem;
   }
 }

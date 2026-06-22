@@ -1,25 +1,25 @@
-/* Variáveis de cores, fontes e espaçamentos do LifeFit */
+/* Variáveis do LifeFit Gym - baseado no Figma */
 :root {
   /* Cores principais */
-  --color-primary: #22c55e;
-  --color-primary-dark: #16a34a;
-  --color-primary-light: #dcfce7;
-  --color-secondary: #0f172a;
-  --color-accent: #f59e0b;
+  --color-red: #cc0000;
+  --color-red-dark: #a30000;
+  --color-red-light: #ff1a1a;
 
-  /* Cores neutras */
+  /* Fundos */
+  --color-bg-dark: #121212;
+  --color-bg-card: #2a2a2a;
+  --color-bg-input: #ffffff;
+  --color-bg-nav: #f5f5f5;
+
+  /* Texto */
   --color-white: #ffffff;
-  --color-gray-50: #f8fafc;
-  --color-gray-100: #f1f5f9;
-  --color-gray-200: #e2e8f0;
-  --color-gray-400: #94a3b8;
-  --color-gray-600: #475569;
-  --color-gray-800: #1e293b;
-  --color-gray-900: #0f172a;
+  --color-black: #000000;
+  --color-gray: #999999;
+  --color-gray-light: #cccccc;
 
   /* Tipografia */
-  --font-body: 'Inter', sans-serif;
-  --font-heading: 'Poppins', sans-serif;
+  --font-main: 'Roboto', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
 
   /* Espaçamentos */
   --space-xs: 0.5rem;
@@ -27,18 +27,17 @@
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
-  --space-2xl: 5rem;
 
-  /* Bordas e sombras */
+  /* Bordas */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
   --radius-full: 9999px;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
 
   /* Layout */
-  --container-width: 1200px;
-  --header-height: 72px;
+  --sidebar-width: 80px;
+  --header-height: 60px;
+  --subnav-height: 44px;
+  --bottom-nav-height: 64px;
+  --container-width: 1100px;
 }

@@ -1,95 +1,77 @@
-# LifeFit - Website
+# LifeFit - Gym & Training
 
-Website institucional do app **LifeFit** (planejador de dieta saudável), desenvolvido como projeto acadêmico da disciplina **Fundamentos Web UX**.
+Website da academia **LifeFit**, desenvolvido com base no protótipo Figma. Projeto acadêmico — Fundamentos Web UX (N3).
 
-## Link do site
+## Links
 
-> Após publicar no GitHub Pages, adicione o link aqui:
-> `https://SEU-USUARIO.github.io/SEU-REPOSITORIO/`
+- **Figma:** [Protótipo LifeFit](https://www.figma.com/proto/LLjcoiwIJqekuU9L0gYQrb/LifeFit?node-id=0-1)
+- **GitHub Pages:** configure em Settings → Pages → branch `main` → pasta `/ (root)`
 
-## Link do Figma
+## Tecnologias
 
-- [Protótipo LifeFit](https://www.figma.com/proto/LLjcoiwIJqekuU9L0gYQrb/LifeFit?node-id=0-1)
-- [Design (Dev Mode)](https://www.figma.com/design/LLjcoiwIJqekuU9L0gYQrb/LifeFit?node-id=0-1)
+HTML5 · CSS3 · JavaScript (Vanilla) · Git · GitHub Pages
 
-## Tecnologias utilizadas
-
-- HTML5
-- CSS3 (variáveis CSS, Flexbox, Grid)
-- JavaScript (Vanilla)
-- Git / GitHub
-- GitHub Pages
-
-## Estrutura de arquivos
+## Estrutura do projeto
 
 ```
-lifefit/
-├── index.html          # Página inicial
+├── index.html                  # Home (hero + planos)
 ├── pages/
-│   ├── sobre.html      # Sobre o projeto
-│   ├── planos.html     # Planos e preços
-│   └── contato.html    # Formulário de contato
+│   ├── login.html              # Tela de login
+│   ├── planos.html             # Seleção e detalhe dos planos
+│   ├── depoimentos.html        # Antes/depois dos alunos
+│   ├── infraestrutura.html     # Fotos da academia
+│   ├── perfil.html             # Perfil do usuário
+│   ├── configuracoes.html      # Toggles de configuração
+│   ├── sobre.html              # Resumo do projeto (Figma Capa)
+│   └── contato.html            # Formulário de contato
 ├── css/
-│   ├── reset.css       # Reset de estilos
-│   ├── variables.css   # Cores, fontes e espaçamentos
-│   ├── style.css       # Estilos principais
-│   └── responsive.css  # Media queries (mobile/desktop)
+│   ├── reset.css
+│   ├── variables.css           # Cores vermelho/preto do Figma
+│   ├── style.css
+│   └── responsive.css
 ├── js/
-│   ├── main.js         # Menu mobile, scroll, animações
-│   ├── planos.js       # Toggle mensal/anual
-│   └── contato.js      # Validação do formulário
-├── assets/
-│   └── images/         # Imagens do projeto
-└── README.md
+│   ├── main.js                 # Menu mobile
+│   ├── login.js                # Validação de login
+│   ├── planos.js               # Navegação entre planos
+│   ├── perfil.js               # Modal encerrar matrícula
+│   ├── configuracoes.js        # Toggle switches
+│   └── contato.js              # Validação do formulário
+└── assets/images/logo.png
 ```
 
-## Funcionalidades
+## Páginas e responsabilidades (para avaliação individual)
 
-| Página   | Funcionalidade                                      | Arquivo JS    |
-|----------|-----------------------------------------------------|---------------|
-| Todas    | Menu hambúrguer responsivo                          | `main.js`     |
-| Todas    | Sombra no header ao rolar                           | `main.js`     |
-| Início   | Animação de cards ao scroll                         | `main.js`     |
-| Planos   | Alternância de preços mensal/anual                  | `planos.js`   |
-| Contato  | Validação de formulário (nome, e-mail, mensagem)    | `contato.js`  |
+| Integrante   | Página / Componente        | Arquivo principal        |
+|--------------|----------------------------|--------------------------|
+| Integrante 1 | Home + Header              | `index.html`, `style.css`|
+| Integrante 2 | Login + Planos             | `login.html`, `planos.js`|
+| Integrante 3 | Perfil + Configurações     | `perfil.js`, `configuracoes.js` |
+| Integrante 4 | Depoimentos + Infraestrutura | `depoimentos.html`, `infraestrutura.html` |
+| Integrante 5 | Sobre + Contato            | `sobre.html`, `contato.js` |
 
-## Como executar localmente
+## Como rodar
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/SEU-USUARIO/lifefit.git
-   ```
-2. Abra a pasta no VS Code
-3. Use a extensão **Live Server** ou abra o `index.html` diretamente no navegador
+1. Abra `index.html` no navegador ou use **Live Server** no VS Code
+2. Teste no mobile com F12 → modo responsivo
 
-## Publicar no GitHub Pages
+## GitHub Pages
 
-1. Crie um repositório público no GitHub
-2. Envie o código para o repositório
-3. Vá em **Settings > Pages**
-4. Em **Source**, selecione a branch `main` e a pasta `/ (root)`
-5. Salve e aguarde alguns minutos
-6. Acesse: `https://SEU-USUARIO.github.io/NOME-DO-REPO/`
+1. Repositório público no GitHub
+2. `git push origin main`
+3. **Settings → Pages → Deploy from branch → main → / (root) → Save**
+4. Aguarde 2–5 minutos e acesse `https://SEU-USUARIO.github.io/NOME-DO-REPO/`
+
+## Paleta de cores (Figma)
+
+| Cor        | Hex       | Uso                    |
+|------------|-----------|------------------------|
+| Vermelho   | `#cc0000` | Botões, sidebar, destaques |
+| Preto      | `#121212` | Fundo principal        |
+| Cinza card | `#2a2a2a` | Cards de planos        |
+| Branco     | `#ffffff` | Textos e inputs        |
 
 ## Equipe
 
-| Integrante     | Responsabilidade        |
-|----------------|-------------------------|
-| Erik Manarin   | HTML / estrutura geral  |
-| Ana Lima       | CSS / design responsivo |
-| Pedro Silva    | JavaScript              |
-| Mariana Costa  | Documentação / GitHub   |
+Erik Manarin · Ana Lima · Pedro Silva · Mariana Costa
 
-> Ajuste os nomes conforme sua equipe real.
-
-## Responsividade
-
-O site foi desenvolvido com abordagem **mobile-first** e testado nos breakpoints:
-
-- Desktop: 1200px+
-- Tablet: 768px – 1024px
-- Mobile: até 768px
-
-## Licença
-
-Projeto acadêmico — uso educacional.
+*(Ajuste com os nomes reais do seu grupo)*

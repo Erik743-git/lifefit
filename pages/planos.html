@@ -3,174 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Escolha o plano LifeFit ideal para seus objetivos de saúde e fitness.">
   <title>Planos | LifeFit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/responsive.css">
 </head>
-<body>
+<body class="has-bottom-nav">
 
-  <header class="header" id="header">
-    <div class="container header__container">
-      <a href="../index.html" class="logo">
-        <span class="logo__icon">🥗</span>
-        <span class="logo__text">Life<span class="logo__highlight">Fit</span></span>
-      </a>
-      <nav class="nav" id="nav">
-        <ul class="nav__list">
-          <li><a href="../index.html" class="nav__link">Início</a></li>
-          <li><a href="sobre.html" class="nav__link">Sobre</a></li>
-          <li><a href="planos.html" class="nav__link nav__link--active">Planos</a></li>
-          <li><a href="contato.html" class="nav__link">Contato</a></li>
-        </ul>
-      </nav>
-      <a href="planos.html" class="btn btn--primary header__cta">Começar grátis</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span class="menu-toggle__bar"></span>
-        <span class="menu-toggle__bar"></span>
-        <span class="menu-toggle__bar"></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="badge">Planos</span>
-        <h1 class="page-hero__title">Escolha o plano ideal para você</h1>
-        <p class="page-hero__text">Comece gratuitamente e faça upgrade quando quiser mais recursos.</p>
-
-        <div class="billing-toggle">
-          <span class="billing-toggle__label billing-toggle__label--active" id="labelMensal">Mensal</span>
-          <button class="billing-toggle__switch" id="billingToggle" aria-label="Alternar entre mensal e anual">
-            <span class="billing-toggle__knob"></span>
+  <div class="app-layout">
+    <div class="app-main">
+      <header class="header">
+        <div class="header__top">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" alt="LifeFit">
+          </a>
+          <div class="header__search">
+            <input type="search" placeholder="Suplementos LifeFit">
+            <span class="header__search-icon">🔍</span>
+          </div>
+          <a href="login.html" class="btn btn--red">Login</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
           </button>
-          <span class="billing-toggle__label" id="labelAnual">Anual <span class="badge badge--small">-20%</span></span>
         </div>
-      </div>
-    </section>
+        <nav class="subnav" id="subnav">
+          <a href="depoimentos.html" class="subnav__link">Depoimentos</a>
+          <a href="infraestrutura.html" class="subnav__link">Nossa Infraestrutura</a>
+          <a href="planos.html" class="subnav__link subnav__link--active">Matricular-se</a>
+        </nav>
+      </header>
 
-    <section class="section">
-      <div class="container">
-        <div class="pricing__grid">
-          <article class="pricing-card">
-            <h3 class="pricing-card__name">Gratuito</h3>
-            <div class="pricing-card__price">
-              <span class="pricing-card__currency">R$</span>
-              <span class="pricing-card__amount" data-mensal="0" data-anual="0">0</span>
-              <span class="pricing-card__period">/mês</span>
-            </div>
-            <p class="pricing-card__desc">Ideal para quem está começando.</p>
-            <ul class="pricing-card__features">
-              <li>Contador de calorias básico</li>
-              <li>Calculadora de IMC</li>
-              <li>Até 3 refeições por dia</li>
-              <li>Relatório semanal</li>
+      <main>
+        <!-- Seleção de planos (estilo Figma mobile) -->
+        <section class="plans-select" id="plansSelect">
+          <div class="plans-select__logo">
+            <img src="../assets/images/logo.png" alt="LifeFit">
+          </div>
+          <a href="#basic" class="plans-select__btn" data-plan="basic">PLANO BASIC</a>
+          <a href="#pro" class="plans-select__btn" data-plan="pro">PLANO PRO</a>
+          <a href="#elite" class="plans-select__btn" data-plan="elite">PLANO ELITE</a>
+          <a href="../index.html" class="plans-select__back">VOLTAR &lt;</a>
+        </section>
+
+        <!-- Detalhe do plano Basic -->
+        <section class="plan-detail container" id="basic" hidden>
+          <article class="plan-card">
+            <h3 class="plan-card__name">Plano Basic</h3>
+            <p class="plan-card__price">R$ 89,90 <span>/mês</span></p>
+            <ul class="plan-card__features">
+              <li>Acesso à unidade assinada</li>
+              <li>Biblioteca de exercícios</li>
+              <li>Dicas de treino e saúde</li>
+              <li>Suporte padrão</li>
             </ul>
-            <a href="contato.html" class="btn btn--outline btn--block">Começar grátis</a>
+            <a href="contato.html" class="btn btn--white btn--block">Adquirir</a>
+            <button class="btn btn--outline btn--block" style="margin-top:0.5rem" data-back>Voltar</button>
           </article>
+        </section>
 
-          <article class="pricing-card pricing-card--featured">
-            <span class="pricing-card__badge">Mais popular</span>
-            <h3 class="pricing-card__name">Pro</h3>
-            <div class="pricing-card__price">
-              <span class="pricing-card__currency">R$</span>
-              <span class="pricing-card__amount" data-mensal="29" data-anual="23">29</span>
-              <span class="pricing-card__period">/mês</span>
-            </div>
-            <p class="pricing-card__desc">Para quem leva a sério os resultados.</p>
-            <ul class="pricing-card__features">
-              <li>Tudo do plano Gratuito</li>
-              <li>Planejador de refeições</li>
-              <li>Contador de atividades</li>
-              <li>Relatórios detalhados</li>
-              <li>200+ receitas exclusivas</li>
+        <section class="plan-detail container" id="pro" hidden>
+          <article class="plan-card plan-card--featured">
+            <h3 class="plan-card__name">Plano Pro</h3>
+            <p class="plan-card__price">R$ 129,90 <span>/mês</span></p>
+            <ul class="plan-card__features">
+              <li>Tudo do Basic</li>
+              <li>Acesso a todas as unidades</li>
+              <li>Aulas em grupo inclusas</li>
+              <li>Avaliação física mensal</li>
             </ul>
-            <a href="contato.html" class="btn btn--primary btn--block">Assinar Pro</a>
+            <a href="contato.html" class="btn btn--white btn--block">Adquirir</a>
+            <button class="btn btn--outline btn--block" style="margin-top:0.5rem" data-back>Voltar</button>
           </article>
+        </section>
 
-          <article class="pricing-card">
-            <h3 class="pricing-card__name">Premium</h3>
-            <div class="pricing-card__price">
-              <span class="pricing-card__currency">R$</span>
-              <span class="pricing-card__amount" data-mensal="49" data-anual="39">49</span>
-              <span class="pricing-card__period">/mês</span>
-            </div>
-            <p class="pricing-card__desc">A experiência completa LifeFit.</p>
-            <ul class="pricing-card__features">
-              <li>Tudo do plano Pro</li>
-              <li>Consultoria nutricional online</li>
-              <li>Metas avançadas com IA</li>
-              <li>Exportação de relatórios</li>
+        <section class="plan-detail container" id="elite" hidden>
+          <article class="plan-card">
+            <h3 class="plan-card__name">Plano Elite</h3>
+            <p class="plan-card__price">R$ 189,90 <span>/mês</span></p>
+            <ul class="plan-card__features">
+              <li>Tudo do Pro</li>
+              <li>Personal trainer 2x/semana</li>
+              <li>Suplementos LifeFit com desconto</li>
               <li>Suporte prioritário 24h</li>
             </ul>
-            <a href="contato.html" class="btn btn--outline btn--block">Assinar Premium</a>
+            <a href="contato.html" class="btn btn--white btn--block">Adquirir</a>
+            <button class="btn btn--outline btn--block" style="margin-top:0.5rem" data-back>Voltar</button>
           </article>
-        </div>
-      </div>
-    </section>
+        </section>
+      </main>
 
-    <section class="section section--gray">
-      <div class="container">
-        <div class="section__header">
-          <h2 class="section__title">Perguntas frequentes</h2>
-        </div>
-        <div class="faq__list">
-          <details class="faq__item">
-            <summary>Posso cancelar a qualquer momento?</summary>
-            <p>Sim! Você pode cancelar sua assinatura quando quiser, sem taxas ou multas.</p>
-          </details>
-          <details class="faq__item">
-            <summary>O plano gratuito tem limite de tempo?</summary>
-            <p>Não. O plano gratuito é permanente e você pode usá-lo pelo tempo que desejar.</p>
-          </details>
-          <details class="faq__item">
-            <summary>Posso trocar de plano depois?</summary>
-            <p>Claro! Faça upgrade ou downgrade a qualquer momento pelo app.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__container">
-      <div class="footer__brand">
-        <a href="../index.html" class="logo">
-          <span class="logo__icon">🥗</span>
-          <span class="logo__text">Life<span class="logo__highlight">Fit</span></span>
-        </a>
-        <p class="footer__desc">Seu companheiro para uma vida mais saudável e equilibrada.</p>
-      </div>
-      <div class="footer__links">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="planos.html">Planos</a></li>
-          <li><a href="contato.html">Contato</a></li>
+      <nav class="bottom-nav">
+        <ul class="bottom-nav__list">
+          <li><a href="perfil.html" class="bottom-nav__link"><span class="bottom-nav__icon">👤</span>Perfil</a></li>
+          <li><a href="../index.html" class="bottom-nav__link"><span class="bottom-nav__icon">🏠</span>Início</a></li>
+          <li><a href="configuracoes.html" class="bottom-nav__link"><span class="bottom-nav__icon">⚙️</span>Config</a></li>
         </ul>
-      </div>
-      <div class="footer__links">
-        <h4>Redes sociais</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-        </ul>
-      </div>
+      </nav>
     </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p>&copy; 2026 LifeFit. Projeto acadêmico - Fundamentos Web UX.</p>
-      </div>
-    </div>
-  </footer>
+    <aside class="sidebar">
+      <div class="sidebar__search">🔍</div>
+      <a href="perfil.html" class="sidebar__avatar">👤</a>
+    </aside>
+  </div>
 
   <script src="../js/main.js"></script>
   <script src="../js/planos.js"></script>
