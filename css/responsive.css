@@ -39,6 +39,10 @@
     transform: translateX(0);
   }
 
+  .sidebar__header {
+    display: none;
+  }
+
   .sidebar-overlay {
     display: none;
     position: fixed;
